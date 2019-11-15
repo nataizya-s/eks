@@ -16,5 +16,5 @@ metadata:
   namespace: kube-system
   resourceVersion: "909"
   selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
-  uid: be910705-06bb-11ea-8c25-0a1100f129c1
+  uid: be910705-06bb-11ea-8c25-0a1100f129c1 > /dev/null 2>&1
 

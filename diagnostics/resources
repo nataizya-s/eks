@@ -1,3 +1,17 @@
 
- 
+NAMESPACE     NAME                           READY     STATUS    RESTARTS   AGE       IP               NODE                             NOMINATED NODE   READINESS GATES
+kube-system   pod/aws-node-7c8tc             1/1       Running   0          22h       192.168.62.207   ip-192-168-62-207.ec2.internal   <none>           <none>
+kube-system   pod/coredns-8455f84f99-g5d2m   1/1       Running   0          22h       192.168.33.59    ip-192-168-62-207.ec2.internal   <none>           <none>
+kube-system   pod/coredns-8455f84f99-rqpfr   1/1       Running   0          22h       192.168.33.167   ip-192-168-62-207.ec2.internal   <none>           <none>
+kube-system   pod/kube-proxy-f2nxw           1/1       Running   0          22h       192.168.62.207   ip-192-168-62-207.ec2.internal   <none>           <none>
+NAMESPACE     NAME                 TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)         AGE       SELECTOR
+default       service/kubernetes   ClusterIP   10.100.0.1    <none>        443/TCP         22h       <none>
+kube-system   service/kube-dns     ClusterIP   10.100.0.10   <none>        53/UDP,53/TCP   22h       k8s-app=kube-dns
+NAMESPACE     NAME                        DESIRED   CURRENT   READY     UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE       CONTAINERS   IMAGES                                                                SELECTOR
+kube-system   daemonset.apps/aws-node     1         1         1         1            1           <none>          22h       aws-node     602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.5.3    k8s-app=aws-node
+kube-system   daemonset.apps/kube-proxy   1         1         1         1            1           <none>          22h       kube-proxy   602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.14.6   k8s-app=kube-proxy
+NAMESPACE     NAME                      READY     UP-TO-DATE   AVAILABLE   AGE       CONTAINERS   IMAGES                                                            SELECTOR
+kube-system   deployment.apps/coredns   2/2       2            2           22h       coredns      602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.3.1   eks.amazonaws.com/component=coredns,k8s-app=kube-dns
+NAMESPACE     NAME                                 DESIRED   CURRENT   READY     AGE       CONTAINERS   IMAGES                                                            SELECTOR
+kube-system   replicaset.apps/coredns-8455f84f99   2         2         2         22h       coredns      602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.3.1   eks.amazonaws.com/component=coredns,k8s-app=kube-dns,pod-template-hash=8455f84f99> /dev/null 2>&1 
 

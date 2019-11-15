@@ -1,4 +1,6 @@
+
 ====CNI Describe Output====
+
 Name:               aws-node-7c8tc
 Namespace:          kube-system
 Priority:           2000001000
@@ -71,11 +73,12 @@ Tolerations:
                  node.kubernetes.io/pid-pressure:NoSchedule
                  node.kubernetes.io/unreachable:NoExecute
                  node.kubernetes.io/unschedulable:NoSchedule
-Events:          <none>
+Events:          <none> > /dev/null 2>&1
 
 ====CNI Pod Logs====
+
 ====== Installing AWS-CNI ======
 ====== Starting amazon-k8s-agent ======
 ERROR: logging before flag.Parse: W1114 09:17:16.734857       9 reflector.go:341] pkg/mod/k8s.io/client-go@v0.0.0-20180806134042-1f13a808da65/tools/cache/reflector.go:99: watch of *v1.Pod ended with: too old resource version: 1027 (3453)
-ERROR: logging before flag.Parse: W1114 12:36:57.066741       9 reflector.go:341] pkg/mod/k8s.io/client-go@v0.0.0-20180806134042-1f13a808da65/tools/cache/reflector.go:99: watch of *v1.Pod ended with: too old resource version: 3453 (21608)
+ERROR: logging before flag.Parse: W1114 12:36:57.066741       9 reflector.go:341] pkg/mod/k8s.io/client-go@v0.0.0-20180806134042-1f13a808da65/tools/cache/reflector.go:99: watch of *v1.Pod ended with: too old resource version: 3453 (21608) > /dev/null 2>&1
 
