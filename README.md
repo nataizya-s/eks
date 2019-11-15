@@ -14,4 +14,4 @@ The script will then generate the "diagnostics" directory containing the followi
         - cluster_events --> any cluster events
         - resources      --> all the resources in the cluster (e.g. deployments, services, pods, etc)
         - cluster_info   --> contains the cluster info from the cluster-info dump command
-        
+	- aws-node-logs  --> logs from the aws-node pods.         
