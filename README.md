@@ -3,7 +3,7 @@
 This tool collects info on the Kubernetes cluster to assist in troubleshooting common issues that arise when connecting a node to a cluster. This is specifically designed for EKS clusters.
 
 ## Usage
-Run the diagnostics.sh script:
+Run the diagnostics.sh script on your client machine (where kubectl commands are run from):
    
         $ ./diagnostics.sh
         
