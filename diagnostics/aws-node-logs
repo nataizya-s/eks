@@ -1,0 +1,81 @@
+====CNI Describe Output====
+Name:               aws-node-7c8tc
+Namespace:          kube-system
+Priority:           2000001000
+PriorityClassName:  system-node-critical
+Node:               ip-192-168-62-207.ec2.internal/192.168.62.207
+Start Time:         Thu, 14 Nov 2019 10:50:02 +0200
+Labels:             controller-revision-hash=7bbf7b5f4
+                    k8s-app=aws-node
+                    pod-template-generation=1
+Annotations:        kubernetes.io/psp=eks.privileged
+Status:             Running
+IP:                 192.168.62.207
+Controlled By:      DaemonSet/aws-node
+Containers:
+  aws-node:
+    Container ID:   docker://7027a6cd5cb8a9246c90c8f2b195d5a059b8f9e754bde30f6c1d4f83ea09acf6
+    Image:          602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.5.3
+    Image ID:       docker-pullable://602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni@sha256:c071dfc45cd957fc6ab2db769ae6374b1f59a08db90b0ff0b9166b8531497a35
+    Port:           61678/TCP
+    Host Port:      61678/TCP
+    State:          Running
+      Started:      Thu, 14 Nov 2019 10:50:13 +0200
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:  10m
+    Environment:
+      AWS_VPC_K8S_CNI_LOGLEVEL:  DEBUG
+      MY_NODE_NAME:               (v1:spec.nodeName)
+    Mounts:
+      /host/etc/cni/net.d from cni-net-dir (rw)
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /host/var/log from log-dir (rw)
+      /var/run/docker.sock from dockersock (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from aws-node-token-ztcjj (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  cni-bin-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /opt/cni/bin
+    HostPathType:  
+  cni-net-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/cni/net.d
+    HostPathType:  
+  log-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log
+    HostPathType:  
+  dockersock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/docker.sock
+    HostPathType:  
+  aws-node-token-ztcjj:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  aws-node-token-ztcjj
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     
+                 node.kubernetes.io/disk-pressure:NoSchedule
+                 node.kubernetes.io/memory-pressure:NoSchedule
+                 node.kubernetes.io/network-unavailable:NoSchedule
+                 node.kubernetes.io/not-ready:NoExecute
+                 node.kubernetes.io/pid-pressure:NoSchedule
+                 node.kubernetes.io/unreachable:NoExecute
+                 node.kubernetes.io/unschedulable:NoSchedule
+Events:          <none>
+
+====CNI Pod Logs====
+====== Installing AWS-CNI ======
+====== Starting amazon-k8s-agent ======
+ERROR: logging before flag.Parse: W1114 09:17:16.734857       9 reflector.go:341] pkg/mod/k8s.io/client-go@v0.0.0-20180806134042-1f13a808da65/tools/cache/reflector.go:99: watch of *v1.Pod ended with: too old resource version: 1027 (3453)
+ERROR: logging before flag.Parse: W1114 12:36:57.066741       9 reflector.go:341] pkg/mod/k8s.io/client-go@v0.0.0-20180806134042-1f13a808da65/tools/cache/reflector.go:99: watch of *v1.Pod ended with: too old resource version: 3453 (21608)
+
