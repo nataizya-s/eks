@@ -1,4 +1,5 @@
 #!/bin/bash
+
 mkdir diagnostics
 
 cat <<EOT >> diagnostics/cluster_info
