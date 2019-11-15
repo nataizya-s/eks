@@ -8,7 +8,7 @@ Run the diagnostics.sh script on your client machine (where kubectl commands are
         $ ./diagnostics.sh
         
 ## Output
-The script will then generate the "diagnostics" directory containing the following files:
+The script will then generate the "diagnostics" directory containing the following files and it will all be zipped up into one file:
 
         - aws-auth       --> the aws-auth config map
         - cluster_events --> any cluster events
